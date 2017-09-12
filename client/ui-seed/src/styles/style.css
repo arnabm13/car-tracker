@@ -1,0 +1,14 @@
+
+tr.latest {
+    background: blue;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+}

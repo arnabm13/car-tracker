@@ -1,0 +1,16 @@
+<h1>High Alerts within last 2 hours</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>VIN</th>
+        <th ng-click="highAlertListVm.sorter.sortBy='length';highAlertListVm.sorter.sortOrder=!highAlertListVm.sorter.sortOrder;">Number of High Alerts</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="(key, value) in highAlertListVm.alerts | groupBy: 'vin'|toArray| orderBy:highAlertListVm.sorter.sortBy:highAlertListVm.sorter.sortOrder">
+        <td><a ng-href="#!/readings/{{value[0].vin}}">{{value[0].vin}}</a></td>
+        <td>{{value.length}}</td>
+    </tr>
+    </tbody>
+</table>

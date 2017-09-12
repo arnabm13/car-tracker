@@ -1,0 +1,22 @@
+<h1>Vehicle List</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Vin</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="vehicle in vehicleListVm.vehicles">
+        <td><a ng-href="#!/vehicles/{{vehicle.vin}}"><img ng-src="http://lorempixel.com/640/480/transport/"></a></td>
+        <td>{{vehicle.make}}</td>
+        <td>{{vehicle.vin}}</td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.year}}</td>
+    </tr>
+    </tbody>
+</table>

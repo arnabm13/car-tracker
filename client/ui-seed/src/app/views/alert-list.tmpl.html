@@ -1,0 +1,18 @@
+<h1>All Historical Alerts</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>PRIORITY</th>
+        <th>TIMESTAMP</th>
+        <th>REASON</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="alert in alertListVm.alert">
+        <td>{{alert.priority}}</td>
+        <td>{{alert.timestamp}}</td>
+        <td>{{alert.reason}}</td>
+    </tr>
+    </tbody>
+</table>
